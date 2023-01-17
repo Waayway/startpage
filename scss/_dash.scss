@@ -1,0 +1,27 @@
+@use "config/config.scss";
+#dash {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-sizing: content-box;
+  width: fit-content;
+  height: 5rem;
+  background-color: config.get-color("dash-bg");
+  z-index: 10;
+  display: flex;
+  gap: .5rem;
+  a {
+    background-color: config.get-color("dash-box-bg");
+    border-radius: 1rem;
+    transition: transform 100ms ease-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+    img {
+      height: 100%;
+    }
+  }
+}

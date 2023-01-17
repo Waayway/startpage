@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": ["script/**/*.d.ts", "script/**/*.ts", "script/**/*.js"]
+}

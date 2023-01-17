@@ -1,0 +1,24 @@
+{
+  "name": "startpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typescript:dev": "tsc -w",
+    "typescript:pub": "tsc",
+    "sass:dev": "sass -w scss:css",
+    "sass:pub": "sass scss:css --style=minified",
+    "dev": "concurrently --kill-others \"npm run sass:dev\" \"npm run typescript:dev\"",
+    "build": "concurrently --kill-other \"npm run sass:pub\" \" npm run typescript:pub\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "concurrently": "^7.6.0",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4"
+  }
+}

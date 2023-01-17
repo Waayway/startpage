@@ -1,0 +1,16 @@
+@use "sass:map";
+
+$colors: (
+    "topbar": rgba(0,0,0, 40%),
+
+    "dash-bg": rgba(0, 0, 0, 40%),
+    "dash-box-bg": rgba(255,255,255, 40% )
+);
+
+@function get-color($color: false) {
+    @if $color {
+      @return map.get($colors, $color);
+    } @else {
+      @return $colors;
+    }
+  }

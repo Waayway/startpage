@@ -1,0 +1,32 @@
+@use "config/config.scss";
+@use "config/util.scss";
+
+#topbar {
+    position: fixed;
+    width: 100%;
+    background-color: config.get-color("topbar");
+    color: util.is-color-dark(config.get-color("topbar"));
+    height: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    font-size: 1.3rem;
+    z-index: 10;
+    div {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    // # Still thinking about this
+    // .dashboardButton {
+    //     cursor: pointer;
+    //     width: fit-content;
+    //     transition: background-color 300ms ease-out;
+    //     border-radius: 1rem;
+    //     &:hover {
+    //         background-color: rgba($color: #fff, $alpha: 0.3);
+    //     }
+    // }
+    .time {
+        text-align: center;
+    }
+}
