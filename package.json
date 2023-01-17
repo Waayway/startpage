@@ -8,9 +8,9 @@
     "typescript:dev": "tsc -w",
     "typescript:pub": "tsc",
     "sass:dev": "sass -w scss:css",
-    "sass:pub": "sass scss:css --style=minified",
+    "sass:pub": "sass scss:css --style=compressed",
     "dev": "concurrently --kill-others \"npm run sass:dev\" \"npm run typescript:dev\"",
-    "build": "concurrently --kill-other \"npm run sass:pub\" \" npm run typescript:pub\""
+    "build": "sh build.sh"
   },
   "keywords": [],
   "author": "",
